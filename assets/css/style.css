@@ -3,3 +3,4 @@ p{margin-bottom:0px;}
 .uk-card{margin:10px;}
 .uk-container{padding-top:2em;}
 header{background-color: #e1ebec;}
+#wxPan, #wxCont, #fcstCont, #historyTitle{display:none;}
