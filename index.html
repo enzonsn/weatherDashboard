@@ -10,30 +10,123 @@
 </head>
 <body>
     <header>
-        <div>
-            <h1>Weather Dashboard</h1>
+        <div class="uk-text-center">
+            <h1 class="uk-heading-medium">Weather Dashboard</h1>
         </div>
     </header>
-    <main>
+    <main class="uk-flex uk-flex-center uk-margin-top">
 
         <section class="wxPan" id="wxPan">
-            <div class="wxCont" id="wxCont">
-                <h3>Current Weather</h3>
+            <div class="uk-container " id="wxCont">
+                <h3 class="uk-heading-divider uk-text-light">Current Weather</h3>
+                <div class="uk-card-default uk-card uk-card-body uk-text-center" id="currWx">
+                    <h3 id="currCity"></h3>
+                    <p id="currDate"></p>
+                    <img src="" alt="" id="wxIcon"> </img>
+                    <div class="uk-container uk-flex uk-flex-around uk-text-left" id="wxData">
+                        <div class="dataLeft">
+                            <p id="wxCurrent"></p>
+                            <p id="wxMin"></p>
+                            <p id="wxMax"></p>
+                        </div>
+                        <div class="dataRight">
+                            <p id="wxHumid"></p>
+                            <p id="wxWind"></p>
+                            <p id="wxUV"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="fcstCont" id="fcstCont">
-                <h3>5 Day Forecast</h3>
+                <h3 class="uk-heading-divider uk-text-light">5 Day Forecast</h3>
+                <div class="uk-flex uk-flex-center uk-text-center" id="fcst">
+                    
+                    <div class="uk-card-default uk-card uk-card-body" id="fcstTile">
+                        <div class="fcstHead" id="fcstHead">
+                            <h4 class="uk-text-light" id="fsctDate1"></h4>
+                            <img id="fsctIcon1"></img>
+                        </div>
+                        <div class="fsctBody" id="fcstBody">
+                            <p id="fcstMin1"></p>
+                            <p id="fcstMax1"></p>
+                            <p id="fcstHumid1"></p>
+                        </div>
+                    </div>
+                    <div class="uk-card-default uk-card uk-card-body" id="fcstTile">
+                        <div class="fcstHead" id="fcstHead">
+                            <h4 class="uk-text-light" id="fsctDate2"></h4>
+                            <img id="fsctIcon2"></img>
+                        </div>
+                        <div class="fsctBody" id="fcstBody">
+                            <p id="fcstMin2"></p>
+                            <p id="fcstMax2"></p>
+                            <p id="fcstHumid2"></p>
+                        </div>
+                    </div>
+                    <div class="uk-card-default uk-card uk-card-body" id="fcstTile">
+                        <div class="fcstHead" id="fcstHead">
+                            <h4 class="uk-text-light" id="fsctDate3"></h4>
+                            <img id="fsctIcon3"></img>
+                        </div>
+                        <div class="fsctBody" id="fcstBody">
+                            <p id="fcstMin3"></p>
+                            <p id="fcstMax3"></p>
+                            <p id="fcstHumid3"></p>
+                        </div>
+                    </div>
+                    <div class="uk-card-default uk-card uk-card-body" id="fcstTile">
+                        <div class="fcstHead" id="fcstHead">
+                            <h4 class="uk-text-light" id="fsctDate4"></h4>
+                            <img id="fsctIcon4"></img>
+                        </div>
+                        <div class="fsctBody" id="fcstBody">
+                            <p id="fcstMin4"></p>
+                            <p id="fcstMax4"></p>
+                            <p id="fcstHumid4"></p>
+                        </div>
+                    </div>
+                    <div class="uk-card-default uk-card uk-card-body" id="fcstTile">
+                        <div class="fcstHead" id="fcstHead">
+                            <h4 class="uk-text-light" id="fsctDate5"></h4>
+                            <img id="fsctIcon5"></img>
+                        </div>
+                        <div class="fsctBody" id="fcstBody">
+                            <p id="fcstMin5"></p>
+                            <p id="fcstMax5"></p>
+                            <p id="fcstHumid5"></p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </section>
 
         <section class="srchPan" id="srchPan">
+
             <div class="srchCont" id="srchCont">
-                <h3>Search</h3>
+                <h3 class="uk-heading-divider uk-text-light">Search</h3>
+                <div class="uk-card-default uk-card uk-card-body">
+                    <form class="uk-search uk-search-default uk-width-1-1">
+                        <button class="uk-search-icon-flip" uk-search-icon id="srchBtn"></button>
+                        <input class="uk-search-input" type="search" placeholder="Search for a location" id="srchInput">
+                    </form>
+                </div>
+            </div>
+
+            <div class="uk-container" id="historyCont">
+                <h3 class="uk-heading-divider uk-text-light" id="historyTitle">Search History</h3>
+                <div class="uk-flex-column uk-flex" id="historyList"></div>
             </div>
         </section>
 
     </main>
 
+    
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
