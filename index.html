@@ -121,6 +121,21 @@
             </div>
         </section>
 
+        <div id="modal" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title uk-text-center">Confirm Location</h2>
+                <form id="locForm">
+                    <p id="formMessage">Please select your desired location.</p>
+                    <div class="uk-margin uk-margin-left uk-margin-top uk-margin-right" uk-overflow-auto id="formBody"></div>
+                    <div class="uk-flex-center uk-flex" id="modalBtns">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button" id="closeBtn">Cancel</button>
+                        <button class="uk-button uk-button-primary uk-margin-left" type="submit" id="searchBtn">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
     </main>
 
     
